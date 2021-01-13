@@ -8,16 +8,27 @@
 <body>
     <h1>Aprendiendo Javascript</h1>
     <script>
-        try{
-            var numero = prompt("digita el numero");
-            if(isNaN(numero)){
-                throw new Error("Este no es un numero");
-            }
-            console.log(numero*numero);
+    var myCar = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969,
+
+        sayItAll: function(){
+            console.log(`the make is: ${this.make}, the model is: 
+            ${this.model}, the year is: ${this.year}`);
         }
-        catch(error){
-            console.log('el error es:'+error);
-        }
+
+    };
+
+    console.log(myCar.make);
+    myCar.sayItAll();
+
+
+    
+    
+
+
+
     </script>
 </body>
 </html>
