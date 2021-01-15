@@ -8,22 +8,30 @@
 <body>
     <h1>Aprendiendo Javascript</h1>
     <script>
-    var myCar = {
-    make: 'Ford',
-    model: 'Mustang',
-    year: 1969,
 
-        sayItAll: function(){
-            console.log(`the make is: ${this.make}, the model is: 
-            ${this.model}, the year is: ${this.year}`);
-        }
+        
+    const numeros = [1,2,3];
+    let uno = numeros [0],
+        dos = numeros [1],
+        tres = numeros [2];
 
-    };
+    console.log(uno,dos,tres);
 
-    console.log(myCar.make);
-    myCar.sayItAll();
+    // destructuración es pasar las 
+    //variables de un objeto a variables
+    //sueltas
 
+    let persona ={
+        nombre: "Alan",
+        apellido: "Suarez",
+        edad: 21
+    }
 
+    let {nombre, apellido, edad} = persona;
+    console.log(nombre,apellido,edad);
+    // finalmente puedes imprimir las
+    // variables nombre, apellido y edad
+    // como variables sueltas
     
     
 
