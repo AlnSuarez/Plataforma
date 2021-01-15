@@ -10,31 +10,34 @@
     <script>
 
         
-    const numeros = [1,2,3];
-    let uno = numeros [0],
-        dos = numeros [1],
-        tres = numeros [2];
+   // parametros REST
+   //los parametros REST son aquellos 
+    //    que nos sirven para hacer funciones
+    //    con parametros infinitos,
 
-    console.log(uno,dos,tres);
+   function sumar(a, b, ...c){
+      let resultado =  a+b;
 
-    // destructuración es pasar las 
-    //variables de un objeto a variables
-    //sueltas
+      c.forEach(function(n){
+          resultado += n
+      });
 
-    let persona ={
-        nombre: "Alan",
-        apellido: "Suarez",
-        edad: 21
-    }
+      return resultado
+   }
 
-    let {nombre, apellido, edad} = persona;
-    console.log(nombre,apellido,edad);
-    // finalmente puedes imprimir las
-    // variables nombre, apellido y edad
-    // como variables sueltas
-    
-    
+   console.log(sumar(1,2));
+   console.log(sumar(1,2,3,4));
 
+//    los operadores spread nos sirven 
+//    para concatenar dos arreglos en uno 
+//    mismo, se usa con ...
+   const arr1 = [1,2,3,4,5],
+   arr2 = [6,7,8,9,0];
+
+   console.log(arr1, arr2);
+
+   const arr3 = [...arr1, ...arr2];
+   console.log(arr3);
 
 
     </script>
