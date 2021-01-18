@@ -9,36 +9,26 @@
     <h1>Aprendiendo Javascript</h1>
     <script>
 
+    // Solamente es un tipo de declaración de 
+    // funcion en una sola linea, o puedes
+    // hacerlo en varias, solamente se remplaza
+    // el function por un =>
         
-   // parametros REST
-   //los parametros REST son aquellos 
-    //    que nos sirven para hacer funciones
-    //    con parametros infinitos,
+    const saludar = nombre => console.log(`Hola ${nombre}`);
+    saludar("Alan");
 
-   function sumar(a, b, ...c){
-      let resultado =  a+b;
+    // un ejemplo sumamente util de una 
+    // arrow function es el siguiente
+    
 
-      c.forEach(function(n){
-          resultado += n
-      });
+    const sumar = (a,b) => a+b;
+    console.log(sumar(1,2));
 
-      return resultado
-   }
+    // otro ejemplo:
 
-   console.log(sumar(1,2));
-   console.log(sumar(1,2,3,4));
+    const numeros = [1,2,3,4,5];
 
-//    los operadores spread nos sirven 
-//    para concatenar dos arreglos en uno 
-//    mismo, se usa con ...
-   const arr1 = [1,2,3,4,5],
-   arr2 = [6,7,8,9,0];
-
-   console.log(arr1, arr2);
-
-   const arr3 = [...arr1, ...arr2];
-   console.log(arr3);
-
+    numeros.forEach((el, index) => console.log(`${el} esta en la posicion ${index}`));
 
     </script>
 </body>
