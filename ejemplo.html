@@ -9,27 +9,56 @@
     <h1>Aprendiendo Javascript</h1>
     <script>
 
-    // Solamente es un tipo de declaración de 
-    // funcion en una sola linea, o puedes
-    // hacerlo en varias, solamente se remplaza
-    // el function por un =>
-        
-    const saludar = nombre => console.log(`Hola ${nombre}`);
-    saludar("Alan");
+    // El dia de hoy vamos a ver como se hacen los clases 
+    // prototipos en javascript
 
-    // un ejemplo sumamente util de una 
-    // arrow function es el siguiente
+    // funcion constructora
+
+    function Animal(nombre, genero){
+        this.nombre = nombre;
+        this.genero = genero;
+
+        this.sonar = function(){
+            console.log("hago sonidos porque estoy vivo");
+        }
+
+        
+    }
+
+    const snoopy = new Animal("snoopy", "macho"), 
+    lolaBunny = new Animal("Lola", "Hembra");
+
+    console.log(snoopy);
+    console.log(lolaBunny);
+
+
+    // Esta es una funcion constructora, a diferencia de que este
+    // Le vamos a agregar los  metodos a diferentes objetos
+    function Animal2(nombre, genero){
+        this.nombre = nombre;
+        this.genero = genero;
+
+        this.sonar = function(){
+            console.log("hago sonidos porque estoy vivo");
+        }
+    }
+
+
+    // Este es un caso de agregar de manera externa la funcion
+    // al prototipo
+    Animal2.prototype.sonar= function(){
+        console.log(`Hola, mi nombre es ${this.nombre}`);
+    }
+
     
 
-    const sumar = (a,b) => a+b;
-    console.log(sumar(1,2));
+    
 
-    // otro ejemplo:
-
-    const numeros = [1,2,3,4,5];
-
-    numeros.forEach((el, index) => console.log(`${el} esta en la posicion ${index}`));
 
     </script>
 </body>
 </html>
+
+
+
+
