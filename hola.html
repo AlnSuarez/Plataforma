@@ -4,27 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo html</title>
+    
 </head>
 <body>
-    <script>
-
-        // El dia de hoy vamos a ver como funcionan las FAA (funciones anonimas autoejecutables)
-        (function (){
-            console.log("mi primer IIFE");
-        })();
-        
-        (function (d,w,c){
-            console.log("mi segunda IIFE");
-            console.log(d);
-            console.log(w);
-        })(document,window,console);
-
-
-        //los parametros d,w,c son abreviaciones
-        //en este caso de document, win, console
-
-
-    </script>
+    <!-- es de vital importancia que se 
+    use la palabra module dentro del script
+    para que asi puedas trabajar con otros
+    scripts -->
+    <script src="JS/modulos.js" type="module"></script>
+    
+    
     
 </body>
 </html>
