@@ -14,14 +14,31 @@
     <script>
 
 
-// Esto es para usar un temporizador
-setTimeout(()=>{
-    console.log("Esto se ejecuta una vez2");
-}, 3000);
+    (() => {
+        console.log("código síncrono");
+        console.log("inicio");
 
-// setInterval(() =>{
-//     console.log("Esto se ejecuta indefinidamente cada cierto intervalo de tiempo");
-// }, 1000)
+        function dos(){
+        setTimeout(function(){
+            console.log("dos");
+        },0);
+        }
+
+        function uno(){
+            setTimeout(function(){
+                console.log("Uno");
+            },0);
+            dos();
+            console.log("tres");
+        }
+
+        uno();
+        console.log("fin");
+    })();
+
+    
+
+
 
     </script>
     
