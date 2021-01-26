@@ -14,29 +14,16 @@
     <script>
 
 
-    (() => {
-        console.log("código síncrono");
-        console.log("inicio");
+    function cuadradoCallback(value, callback){
+        setTimeout(()=>
+        {
+            callback(value, value*value);
+        },0 | Math.Random*100);  
+    }
 
-        function dos(){
-        setTimeout(function(){
-            console.log("dos");
-        },0);
-        }
-
-        function uno(){
-            setTimeout(function(){
-                console.log("Uno");
-            },0);
-            dos();
-            console.log("tres");
-        }
-
-        uno();
-        console.log("fin");
-    })();
-
-    
+    cuadradoCallback(0, (value,result)=>{
+        console.log("inicia callback");
+    })
 
 
 
