@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprendiendo html</title>
+    <link rel="stylesheet" href="Styles/hola.css">
+    
+    <title>REMINDERPOP</title>
+    <link rel="icon" href="./img/REMINDERPOPLOGO.jpg" type="image/jpg" sizes="16x16">
     
 </head>
 <body>
-    <!-- es de vital importancia que se 
-    use la palabra module dentro del script
-    para que asi puedas trabajar con otros
-    scripts -->
-    <script>
+    <h1>REMINDERPOP</h1>
+    
+    <div id="contentBox">
+        <div id="Header">
+            <div id="dateAndTrash">
+                <div id="fechabox">
+                    <p id="fecha"></p>
+                </div>
+                    <img src="./img/RecyclerTrash.png" id="RecyclerTrash" onmouseover="changeImage()" onmouseout="setOldImage()">
+                
+            </div>
 
 
-    function cuadradoCallback(value, callback){
-        setTimeout(()=>
-        {
-            callback(value, value*value);
-        },0 | Math.Random*100);  
-    }
+            <div class="TaskContent">
+                <ul id="list">
+                    <li>Esto es una prueba</li>
+                </ul>
+            </div>
+        </div>
 
-    cuadradoCallback(0, (value,result)=>{
-        console.log("inicia callback");
-    })
-
-
-
-    </script>
+    </div>
+        
+    <input type="text" name="entradaTexto" id="texto" required minlength="1" maxlength="30" placeholder="write your task here">
+    <button id="botonazo" onclick="addItem()">Presiona aki bro</button>
+    <script src ="../javascript/logic.js"></script>    
     
     
     

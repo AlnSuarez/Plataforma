@@ -1,0 +1,97 @@
+@font-face{
+	font-family:aBigDeal;
+	src:url(../fonts/aBigDeal.ttf);
+}
+h1{
+    font-family: aBigDeal;
+    text-align: center;   
+    color: blanchedalmond;
+    margin-top: 2em;
+}
+
+body{
+    background-color: black;
+}
+
+#contentBox{
+    background-color:blanchedalmond;
+    border-radius: 1cm;
+    margin-left: 25%;
+
+    display: inline-block;
+    height: 65vh;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+}
+
+
+#RecyclerTrash{
+    display: block;
+    height:2em;
+    margin-left: 2em; 
+    margin-top: 0.7em;
+}
+
+
+#dateAndTrash{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#fechabox{
+    flex-wrap: wrap;
+    background-color: rgb(26, 106, 153);
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 1cm;
+    color: aliceblue;
+    margin: 0cm;
+    
+    
+}
+#fecha{
+    font-family: aBigDeal;
+    align-items: flex-end;
+}
+
+#fechaBox{
+    margin-top: 1em;
+}
+.TaskContent{
+    margin-top: 1em;
+    background-color: rgb(255, 148, 148);
+    border-radius: 1cm;
+    width: 90%;
+    margin-left: 5%;
+    height: 20rem;
+    overflow:auto;
+}
+#texto{
+    width: 15%;
+    height: 5em;
+    background-color: rgb(108, 186, 255);
+    margin-left: 30%;
+    border-radius: 0.5cm;
+    font-family: aBigDeal;
+    margin-top: 1em;
+    padding-left: 2.5%;
+    border: none;
+}
+
+::placeholder{
+    color: black;
+}
+
+#texto:hover{
+    background-color: rgb(255, 112, 112);
+    color: aliceblue;
+    transition: 1s;
+}
+
+li{
+
+}
