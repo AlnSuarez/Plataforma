@@ -1,4 +1,10 @@
 let fecha = new Date();
+let input = document.querySelector('input');
+input.addEventListener('keyup', (e) => {
+    if(e.keyCode==13){
+        addItem();
+    }
+})
 
 document.getElementById("fecha").innerHTML=fecha.toDateString();
 
@@ -9,6 +15,9 @@ function changeImage(){
 function setOldImage(){
     document.getElementById("RecyclerTrash").src="./img/RecyclerTrash.png"
 }
+
+
+
 
 
 function addItem(){
